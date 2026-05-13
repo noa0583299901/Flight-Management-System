@@ -1,0 +1,21 @@
+# Java & Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Virtual Machine & Logs
+*.log
+.metadata/
+
+# VS Code
+.vscode/
+.settings/
+.project
+.classpath
+bin/
+
+# OS specific
+.DS_Store
+Thumbs.db
