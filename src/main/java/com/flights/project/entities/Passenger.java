@@ -1,4 +1,5 @@
 package com.flights.project.entities;
+
 import jakarta.persistence.*;
 import lombok.Data;
 import java.util.List;
@@ -12,7 +13,13 @@ public class Passenger {
     
     private String firstName;
     private String lastName;
+    
+    @Column(unique = true, nullable = false)
     private String email;
+    
+    private String password; 
+    @Column(name = "passenger_role") 
+    private String role;    
 
     @OneToMany(mappedBy = "passenger", cascade = CascadeType.ALL)
     private List<Booking> bookings;

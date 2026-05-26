@@ -52,4 +52,16 @@ public class FlightService {
         }
         return dto;
     }
+   public FlightDTO saveFlight(FlightDTO flightDTO) {
+     Flight flight = new Flight();
+    flight.setId(flightDTO.getId());
+    flight.setFlightNumber(flightDTO.getFlightNumber());
+    flight.setOrigin(flightDTO.getOrigin());
+    flight.setDestination(flightDTO.getDestination());
+    flight.setDepartureTime(flightDTO.getDepartureTime());
+    flight.setBasePrice(flightDTO.getBasePrice());
+    flight.setAvailableSeats(flightDTO.getAvailableSeats());
+Flight savedFlight = flightRepository.save(flight);
+  return convertToDTO(savedFlight);
+}
 }

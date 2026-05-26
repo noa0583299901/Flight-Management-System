@@ -4,7 +4,9 @@ target/
 *.jar
 *.war
 *.ear
-
+*.db
+data/
+.idea/
 # Virtual Machine & Logs
 *.log
 .metadata/

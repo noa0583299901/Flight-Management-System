@@ -13,7 +13,7 @@ public class FlightDTO {
     private LocalDateTime arrivalTime;
     private double basePrice;
     
-    // חשיפת מספר המקומות הפנויים לצד הלקוח
+   
     private int availableSeats; 
     
     private List<String> passengerNames; 

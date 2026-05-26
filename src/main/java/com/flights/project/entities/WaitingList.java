@@ -2,10 +2,12 @@ package com.flights.project.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
-public class Booking {
+public class WaitingList {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,9 +20,5 @@ public class Booking {
     @JoinColumn(name = "passenger_id")
     private Passenger passenger;
 
-    private String seatNumber;
-    private double finalPrice;
-
-    @Enumerated(EnumType.STRING)
-    private ClassType classType; 
+    private LocalDateTime requestTime; 
 }
